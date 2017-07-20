@@ -18,8 +18,8 @@ def test_array_set():
 
 def test_broadcast_to():
     ctx = ndarray.gpu(0)
-    shape = (200, 300)
-    to_shape = (130, 200, 300)
+    shape = (300)
+    to_shape = (200, 300)
     x = np.random.uniform(-1, 1, shape).astype(np.float32)
     arr_x = ndarray.array(x, ctx=ctx)
     arr_y = ndarray.empty(to_shape, ctx=ctx)
